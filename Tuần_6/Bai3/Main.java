@@ -9,6 +9,7 @@ public class Main {
 
         int money = 0;
         int amount = 0;
+        String password;
         account.setAccount();
 
         System.out.printf("Nhap so tien can gui: ");
@@ -20,7 +21,8 @@ public class Main {
         System.out.printf("So du tai khoan la: %d\n", account.getBalance());
         System.out.println("-----Thong tin tai khoan-----");
         account.display();
-
+        
+        account.setPassword();
         sc.close();
     }
 }
