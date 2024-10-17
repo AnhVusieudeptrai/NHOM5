@@ -11,7 +11,7 @@ public class Bai4 {
         System.out.println("Nhap so nguyen can kiem tra: ");
         n = sc.nextInt();
         for(int i = 2; i <= n / 2; i++) {
-            if( n % i == 0) {
+            if(n % i == 0) {
                 System.out.println("Do khong phai so nguyen to.");
                 return;
             }
@@ -20,6 +20,7 @@ public class Bai4 {
         if(count > 0) {
             System.out.println("Do la so nguyen to.");
         }
+
         sc.close();
     }   
 }

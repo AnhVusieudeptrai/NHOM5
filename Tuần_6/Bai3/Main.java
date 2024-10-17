@@ -9,7 +9,6 @@ public class Main {
 
         int money = 0;
         int amount = 0;
-        String password;
         account.setAccount();
 
         System.out.printf("Nhap so tien can gui: ");
