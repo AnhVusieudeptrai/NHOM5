@@ -4,42 +4,74 @@
  */
 package BAI2;
 
-import java.util.Scanner;
-
 /**
  *
  * @author My Le
  */
 public class SINHVIEN {
-    public String MSV; 
-    public String Ten;
-    public String ngSinh;
-    public double DTB;
-    public double getDTB() {
-        return DTB;
+    private String maSinhVien;
+    private String ten;
+    private String ngaySinh;
+    private double diemTrungBinh;
+    private String hocLuc;
+
+    public SINHVIEN(String maSinhVien, String ten, String ngaySinh, double diemTrungBinh) {
+        this.maSinhVien = maSinhVien;
+        this.ten = ten;
+        this.ngaySinh = ngaySinh;
+        this.diemTrungBinh = diemTrungBinh;
     }
-    public void setDTB(double DTB) {
-        this.DTB = DTB;
+
+    public String getMaSinhVien() {
+        return maSinhVien;
     }
- public void Nhap()
- {
-     Scanner sc= new Scanner(System.in);
-     System.out.print("Nhap ma sinh vien: ");
-     MSV = sc.nextLine(); 
-     System.out.print("Nhap ho ten sinh vien: ");
-     Ten = sc.nextLine(); 
-     System.out.print("Nhap ngay sinh (dd/mm/yyyy): ");
-     ngSinh = sc.nextLine();
-     System.out.print("Nhap diem trung binh: ");
-     DTB = sc.nextDouble(); 
-     sc.nextLine(); 
- }
- public void Xuat()
-{
-    System.out.println("Ma sinh vien: " + MSV);
-    System.out.println("Ho ten sinh vien: " + Ten);
-    System.out.println("Ngay sinh: " + ngSinh);
-    System.out.println("Diem trung binh: " + DTB);
-}
- 
+
+    public void setMaSinhVien(String maSinhVien) {
+        this.maSinhVien = maSinhVien;
+    }
+
+    public String getTen() {
+        return ten;
+    }
+
+    public void setTen(String ten) {
+        this.ten = ten;
+    }
+
+    public String getNgaySinh() {
+        return ngaySinh;
+    }
+
+    public void setNgaySinh(String ngaySinh) {
+        this.ngaySinh = ngaySinh;
+    }
+
+    public double getDiemTrungBinh() {
+        return diemTrungBinh;
+    }
+
+    public void setDiemTrungBinh(double diemTrungBinh) {
+        if(diemTrungBinh>=0 &&diemTrungBinh<=10)
+            this.diemTrungBinh = diemTrungBinh;
+        else
+            System.out.println("Diem trung binh khong hop le");
+    }
+    public String getHocLuc() {
+        return hocLuc;
+    }
+    public String xepLoai()
+    {
+        if (diemTrungBinh>=8)
+            hocLuc="Gioi";
+        else
+            if (diemTrungBinh>=6.5)
+                hocLuc="Kha";
+            else
+                if(diemTrungBinh>=5)
+                    hocLuc="Trung binh";
+                else
+                    hocLuc="Yeu";   
+        return hocLuc;
+    }       
+    
 }
