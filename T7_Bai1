@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package BAI1;
+
+/**
+ *
+ * @author My Le
+ */
+public class HINHTRON 
+{
+    private double banKinh;
+    public double getBanKinh() {
+        return banKinh;
+    }
+    public void setBanKinh(double banKinh) {
+        if (banKinh>0)
+            this.banKinh = banKinh;
+        
+        else
+            System.out.println("Ban kinh phai lon hon 0");
+        
+    }
+    public HINHTRON(double banKinh) {
+        this.banKinh = banKinh;
+    }
+    public double dienTich()
+    {
+        return banKinh*banKinh*3.14;
+    }
+    public double chuVi()
+    {
+        return 2*banKinh*3.14;
+    }
+}
