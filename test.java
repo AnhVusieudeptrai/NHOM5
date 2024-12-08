@@ -12,9 +12,8 @@ public class test {
     public static void main(String args[])
     {
         taiKhoanNganHang taiKhoan = new taiKhoanNganHang("123456789", "Tran Thi My", 1000);
-        taiKhoan.kiemTraSoDu();
-        taiKhoan.guiTien(500);
-        taiKhoan.rutTien(300);
-        taiKhoan.kiemTraSoDu();
+        taiKhoanNganHang taiKhoan1= new taiKhoanNganHang("123","my lee");
+        System.out.println("ctk: "+taiKhoan.getChuTaiKhoan());
+        taiKhoan.setChuTaiKhoan("MY LE");
     }
 }
